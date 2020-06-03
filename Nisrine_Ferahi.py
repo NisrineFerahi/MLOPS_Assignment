@@ -170,7 +170,7 @@ print ("STEP 3: DEVELOPING THE MODEL...")
 X = df_dev.drop("ob_target",axis =1)
 y = df_dev["ob_target"]
 Xo = df_oot
-RF = RandomForestClassifier(criterion = 'entropy',n_estimators = 800, min_samples_split = 10, min_samples_leaf = 4,
+RF = RandomForestClassifier(criterion = 'entropy',n_estimators = 1000, min_samples_split = 10, min_samples_leaf = 4,
                             max_features = 'log2', max_depth = 20, bootstrap = True, random_state=1,n_jobs = 5)
 
 fitted_model = RF.fit(X, y)
